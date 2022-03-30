@@ -1,0 +1,20 @@
+{
+  "name": "cypress-fedex",
+  "version": "1.0.0",
+  "description": "this is for cypress automation for Fed Ex Application",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/output.json",
+    "generate_mochawesome_report": "marge cypress/reports/output.json --reportDir ./ --inline",
+    "final_report": "npm run merge && npm run generate_mochawesome_report"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "cypress": "^9.5.2",
+    "mochawesome": "^7.1.2",
+    "mochawesome-merge": "^4.1.0"
+  }
+}
